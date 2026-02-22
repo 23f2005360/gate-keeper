@@ -1,0 +1,50 @@
+{
+  "name": "gate-qa",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://superawat.github.io/Gate_QA/",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "better-react-mathjax": "^2.0.2",
+    "dompurify": "^3.3.1",
+    "katex": "^0.16.7",
+    "rc-slider": "^11.1.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-select": "^5.7.3"
+  },
+  "scripts": {
+    "start": "node scripts/deployment/sync-calculator.mjs --public && vite",
+    "build": "node scripts/deployment/sync-calculator.mjs --public && vite build && node scripts/deployment/ensure-nojekyll.mjs && node scripts/deployment/sync-calculator.mjs --dist",
+    "serve": "vite preview",
+    "audit:canonical": "node scripts/audit-canonical-filters.mjs"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "vite": "^7.3.1"
+  }
+}
