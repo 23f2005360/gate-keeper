@@ -42,3 +42,4 @@ def test_orphan_answer_goes_to_suspicious():
     assert rows == []
     assert len(suspicious) == 1
     assert suspicious[0]["reason"] == "orphan_answer_without_id"
+

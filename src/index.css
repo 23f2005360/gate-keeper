@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ol,
+ul {
+  list-style-position: outside;
+  margin-left: 1.5rem;
+  /* Add indentation for the markers */
+}
+
+li {
+  padding-left: 0.5rem;
+  /* Space between marker and content */
+  margin-bottom: 0.5rem;
+  /* Space between options */
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
